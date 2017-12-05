@@ -5,6 +5,9 @@
  */
 package prohousedesktop;
 
+import classes.Equipamento;
+import java.util.ArrayList;
+
 /**
  *
  * @author a1502549
@@ -15,7 +18,11 @@ public class ProHouseDesktop {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Equipamento E = new Equipamento();
+        ArrayList<Equipamento> lista = new ArrayList<Equipamento>();
+
+        System.out.println("Nome: " + E.getNome() + " IP: " + E.getIp());
+
     }
-    
+
 }
