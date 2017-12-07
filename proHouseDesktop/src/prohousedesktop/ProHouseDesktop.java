@@ -7,6 +7,7 @@ package prohousedesktop;
 
 import classes.Equipamento;
 import java.util.ArrayList;
+import org.javalite.activejdbc.Base;
 
 /**
  *
@@ -18,6 +19,9 @@ public class ProHouseDesktop {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/test", "the_user", "the_password");
+
         Equipamento E = new Equipamento();
         ArrayList<Equipamento> lista = new ArrayList<>();
         
