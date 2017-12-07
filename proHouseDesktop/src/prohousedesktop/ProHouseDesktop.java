@@ -6,7 +6,6 @@
 package prohousedesktop;
 
 import classes.Equipamento;
-import java.util.ArrayList;
 import org.javalite.activejdbc.Base;
 
 /**
@@ -20,13 +19,16 @@ public class ProHouseDesktop {
      */
     public static void main(String[] args) {
 
-        Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/prohouse", "root", " ");
-
+        Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/prohouse", "root", "");
+        Equipamento.findAll().dump();
+        
         Equipamento E = new Equipamento();
-        E.set("Cafeteira", "10.10.0.2");
-        E.set("Lâmpada", "10.0.0.3");
+        E.set("nome", "Cafeteira");
+        E.set("ip", "10.0.0.3");
        
         E.saveIt();
+        
+        Base.close();
     }
 
 }
