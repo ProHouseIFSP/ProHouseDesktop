@@ -109,8 +109,10 @@ public class Controlador extends javax.swing.JPanel {
 
     private void salvarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salvarMouseClicked
         Equipamento E = new Equipamento ();
-        E.setNome(nomeEquipamento.toString());
-        E.setIp(IPEquipamento.toString());
+        E.set(nomeEquipamento.toString());
+        E.set(IPEquipamento.toString());
+        
+        E.saveIt();
     }//GEN-LAST:event_salvarMouseClicked
 
 

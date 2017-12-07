@@ -19,18 +19,14 @@ public class ProHouseDesktop {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/proHouseMySQL", "root", "");
+
+        Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/prohouse", "root", " ");
 
         Equipamento E = new Equipamento();
-        ArrayList<Equipamento> lista = new ArrayList<>();
-        
-        E.setId(1);
-        E.setNome("CAFETEIRA");
-        E.setIp("10.10.117.117");
-        lista.add(E);
-        
-        lista.forEach(System.out::println);
+        E.set("Cafeteira", "10.10.0.2");
+        E.set("Lâmpada", "10.0.0.3");
+       
+        E.saveIt();
     }
-    
+
 }
