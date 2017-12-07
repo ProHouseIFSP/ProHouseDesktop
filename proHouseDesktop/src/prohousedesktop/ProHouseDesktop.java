@@ -20,7 +20,7 @@ public class ProHouseDesktop {
      */
     public static void main(String[] args) {
         
-        Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/test", "the_user", "the_password");
+        Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/proHouseMySQL", "root", "");
 
         Equipamento E = new Equipamento();
         ArrayList<Equipamento> lista = new ArrayList<>();

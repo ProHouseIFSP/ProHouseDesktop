@@ -53,6 +53,7 @@ public class Login extends javax.swing.JPanel {
         jTextField2.setFont(new java.awt.Font("Berlin Sans FB", 0, 12)); // NOI18N
         jTextField2.setText("jTextField2");
         jTextField2.setToolTipText("");
+        jTextField2.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
         jButton1.setFont(new java.awt.Font("Berlin Sans FB", 0, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(102, 102, 102));
