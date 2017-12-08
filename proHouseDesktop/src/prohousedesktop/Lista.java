@@ -110,6 +110,7 @@ public class Lista extends javax.swing.JFrame {
     private void novoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_novoMouseClicked
 
         new Controlador().setVisible(true);
+        novo.setVisible(false);
     }//GEN-LAST:event_novoMouseClicked
 
     /**
