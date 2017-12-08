@@ -5,7 +5,7 @@
  */
 package prohousedesktop;
 
-import classes.Equipamento;
+import javax.swing.JFrame;
 import org.javalite.activejdbc.Base;
 
 /**
@@ -18,17 +18,14 @@ public class ProHouseDesktop {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
-        Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/prohouse", "root", "");
-        Equipamento.findAll().dump();
-        
-        Equipamento E = new Equipamento();
-        E.set("nome", "Cafeteira");
-        E.set("ip", "10.0.0.3");
        
-        E.saveIt();
-        
-        Base.close();
+//        JFrame frame = new JFrame("MyPanel");
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        frame.getContentPane().add(new Lista2());
+//        frame.pack();
+//        frame.setVisible(true);
+
+          new Lista().setVisible(true);
     }
 
 }
