@@ -216,7 +216,7 @@ public class Login extends javax.swing.JFrame {
 
         Usuario u = Usuario.findById(user);
 
-        if (user != null && user == u.getString("nomeUsuario = ?") && pwd == u.getString("senha = ?")) {
+        if (user != null && (user == null ? u.getString("nomeUsuario = ?") == null : user.equals(u.getString("nomeUsuario = ?"))) && (pwd == null ? u.getString("senha = ?") == null : pwd.equals(u.getString("senha = ?")))) {
             this.dispose();
             new Lista().setVisible(true);
         } else {
