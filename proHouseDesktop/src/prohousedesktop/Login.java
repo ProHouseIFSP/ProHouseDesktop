@@ -13,19 +13,10 @@ import classes.Usuario;
  */
 public class Login extends javax.swing.JFrame {
 
+    private Object user;
+
     public Login() {
         initComponents();
-        Banco.iniciar();
-
-        String user = usuario.getText();
-        String pwd = senha.getText();
-
-        Usuario u = new Usuario();
-        
-        user = (String) u.get("nomeUsuario");
-        pwd = (String) u.get("senha");
-
-        Banco.fechar();
 
     }
 
@@ -217,8 +208,22 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        this.dispose();
-        new Lista().setVisible(true);
+
+        Banco.iniciar();
+
+        String user = usuario.getText();
+        String pwd = senha.getText();
+
+        Usuario u = Usuario.findById(user);
+
+        if (user != null && user == u.getString("nomeUsuario = ?") && pwd == u.getString("senha = ?")) {
+            this.dispose();
+            new Lista().setVisible(true);
+        } else {
+            u.setString(user, "Insira nome de usuário");
+            u.setString(pwd, "Insira senha");
+        }
+        Banco.fechar();
     }//GEN-LAST:event_jButton2MouseClicked
 
     /**

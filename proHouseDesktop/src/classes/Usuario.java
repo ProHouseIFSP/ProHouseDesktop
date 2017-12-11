@@ -15,10 +15,9 @@ import org.javalite.activejdbc.annotations.Table;
  */
 @Table("usuario")
 public class Usuario extends Model {
-    Usuario u = Usuario.findById(this);
     
     static {
-        validatePresenceOf("usuario").message("Por favor, insira usuário");
+        validatePresenceOf("nomeUsuario").message("Por favor, insira usuário");
         validatePresenceOf("senha").message("Por favor, insira senha");
        
     }
