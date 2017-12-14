@@ -25,7 +25,7 @@ public class ProHouseDesktop {
 //        frame.pack();
 //        frame.setVisible(true);
 
-          new Login().setVisible(true);
+          new Lista().setVisible(true);
     }
 
 }
