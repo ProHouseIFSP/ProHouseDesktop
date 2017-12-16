@@ -13,7 +13,7 @@ import org.javalite.activejdbc.Base;
  */
 public class Banco {
     public static void iniciar(){
-        Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/prohouse", "root", "");
+        Base.open("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/prohouse", "root", "123456");
     }
     
     public static void fechar(){
