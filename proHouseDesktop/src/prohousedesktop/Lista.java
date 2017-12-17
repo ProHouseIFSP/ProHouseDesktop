@@ -26,6 +26,7 @@ public class Lista extends javax.swing.JFrame {
 
         String conteudo = "";
         for (Equipamento eq : eqs) {
+            novo.setVisible(false);
             conteudo += "Nome: " + eq.get("nome") + "\nIP: " + eq.get("ip") + "\n-------------\n";
         };
         nome1.setText(conteudo);

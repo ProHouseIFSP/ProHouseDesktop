@@ -24,15 +24,16 @@ import prohousedesktop.Banco;
 public class AcessoArduino implements Runnable{
     
     private int status = 0;
+    private int x = 0;
     
     @Override
     public void run() {
-        
         new Timer().schedule(new TimerTask() {
             @Override
             public void run() {
-                System.out.println("Verificando...");
+                System.out.println(x);
                 verifica();
+                x = x + 1;
             }
         }, 5000, 1000);
         
