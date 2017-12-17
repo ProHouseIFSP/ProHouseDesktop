@@ -5,8 +5,11 @@
  */
 package prohousedesktop;
 
-import javax.swing.JFrame;
-import org.javalite.activejdbc.Base;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+import prohousedesktop.arduino.AcessoArduino;
 
 /**
  *
@@ -24,8 +27,10 @@ public class ProHouseDesktop {
 //        frame.getContentPane().add(new Lista2());
 //        frame.pack();
 //        frame.setVisible(true);
+        AcessoArduino acesso = new AcessoArduino();
+        acesso.run();
 
-          new Lista().setVisible(true);
+        new Lista().setVisible(true);
     }
 
 }
